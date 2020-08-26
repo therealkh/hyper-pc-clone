@@ -16,6 +16,7 @@ $menu_bor_bot: #D60000;
 	align-items: center;
 	padding: 0 15px;
 	position: relative;
+	height: 55px;
 
 	.logo {
 		width: 100px;
@@ -32,7 +33,7 @@ $menu_bor_bot: #D60000;
 		width: 35px;
 		height: 20px;
 
-		@media (max-width:1290px) {
+		@media (max-width:1080px) {
 			display: block;
 			position: absolute;
 			//top: 0;
@@ -87,8 +88,9 @@ $menu_bor_bot: #D60000;
 		transition: all 0.3s;
 		opacity: 1;
 		display: block;
+		height: 100%;
 
-		@media (max-width:1290px) {
+		@media (max-width:1080px) {
 			position: absolute;
 			top: -50%;
 			background-color: $menu_item_dark;
@@ -102,7 +104,7 @@ $menu_bor_bot: #D60000;
 				left: 50%;
 				transform: translateX(-50%);
 				top: 25px;
-				font-family: 'Russo One';
+				font-family: 'Play';
 				font-size: 25px;
 				color: #fff;
 			}
@@ -118,13 +120,17 @@ $menu_bor_bot: #D60000;
 			display: flex;
 			justify-content: space-between;
 			padding: 0;
+			margin: 0;
+			height: 100%;
 
-			@media (max-width:1290px) {
+			@media (max-width:1080px) {
 				flex-direction: column;
 			}
 
 			&-item {
-				border-bottom: 2px solid transparent;
+				a {
+					border-bottom: 2px solid transparent;
+				}
 
 				&-light {
 					a {
@@ -142,7 +148,7 @@ $menu_bor_bot: #D60000;
 					&:nth-child(6) {
 						margin-left: 70px;
 
-						@media (max-width:1290px) {
+						@media (max-width:1080px) {
 							margin: unset;
 							margin: 10px 0; //! должно совпадать с общими стилями для li (чуть ниже)
 						}
@@ -151,8 +157,12 @@ $menu_bor_bot: #D60000;
 					a {
 						color: $menu_item_dark;
 
-						@media (max-width:1290px) {
+						@media (max-width:1080px) {
 							color: $menu_item_light;
+						}
+
+						@media (max-width: 1290px) {
+							font-size: 10px;
 						}
 					}
 
@@ -160,7 +170,7 @@ $menu_bor_bot: #D60000;
 						a {
 							border-bottom: 2px solid $menu_item_dark;
 
-							@media (max-width:1290px) {
+							@media (max-width:1080px) {
 								border-bottom: 2px solid $menu_bor_bot;
 							}
 						}
@@ -175,15 +185,190 @@ $menu_bor_bot: #D60000;
 			li {
 				list-style: none;
 				margin: 0 15px;
+				position: relative;
+				height: 100%;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
 
-				@media (max-width: 1290px) {
+				@media (max-width: 1080px) {
 					text-align: center;
 					margin: 10px 0; //! ВОТ ТУТ
 				}
 
 				a {
 					text-decoration: none;
+					//height: 100%;
+					display: flex;
+					align-items: center;
 
+					@media (max-width:1290px) {
+						font-size: 10px;
+					}
+				}
+
+				.drop-down {
+					padding: 10px 0;
+					position: absolute;
+					top: 55px;
+					left: 0;
+					background-color: $footer_gray_bg;
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-start;
+					text-transform: none;
+					display: none;
+					//width: 300px;
+					//min-height: 300px;
+
+					.sub-menu {
+						font-family: 'Play';
+						font-weight: 500;
+						position: relative;
+
+						margin: 0;
+						padding: 0;
+
+						hr {
+							margin: 0 auto;
+							padding: 0;
+							width: 90%;
+							//height: 1px;
+							border-color: $menu_item_gray;
+							opacity: .2;
+						}
+
+						li {
+							margin: 0;
+							padding: 0;
+
+							&>a {
+								padding: 12px 20px;
+								display: flex;
+								align-items: center;
+								color: $menu_item_gray;
+								border-bottom: none;
+								height: 100%;
+								width: 100%;
+								white-space: nowrap;
+
+								&:hover {
+									background-color: $menu_bor_bot;
+									//color: $footer_gray_bg;
+								}
+							}
+
+							&.sub-menu-big {
+								font-size: 18px;
+							}
+
+							&.sub-menu-little {
+								font-size: 13px;
+							}
+
+							span {
+								//background-color: #fff;
+								width: 20px;
+								height: 20px;
+								background-size: contain;
+								background-repeat: no-repeat;
+								background-position: center;
+								margin-right: 7px;
+
+								&.model {
+									background-image: url(../img/models.svg);
+								}
+
+								&.configurator {
+									background-image: url(../img/configurator.svg);
+								}
+
+								&.params {
+									background-image: url(../img/params.svg);
+								}
+
+								&.test {
+									background-image: url(../img/series.svg);
+								}
+							}
+
+							@media (min-width: 1080px) {
+
+								&:hover>.sub-sub-menu,
+								.sub-sub-menu:hover {
+									display: block;
+								}
+
+								&:hover>.sub-sub-menu-preview,
+								.sub-sub-menu-preview:hover {
+									display: flex;
+								}
+							}
+						}
+
+						//height: 100%;
+					}
+
+					.sub-sub-menu {
+						display: none;
+						background-color: $footer_gray_bg;
+						position: absolute;
+						right: 0;
+						transform: translateX(100%);
+						top: -10px;
+						margin: 0;
+						padding: 10px 0;
+						border-left: 1px solid rgba($color: $menu_item_gray, $alpha: 0.2);
+
+						li {
+							@media (min-width: 1080px) {
+
+								&:hover>.sub-sub-menu-preview,
+								.sub-sub-menu-preview:hover {
+									display: flex;
+								}
+							}
+						}
+
+						&-preview {
+
+							background-color: $footer_gray_bg;
+							position: absolute;
+							top: -10px;
+							right: 0;
+							transform: translateX(100%);
+							padding: 20px;
+							//display: flex;
+							display: none;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+
+							p {
+								font-size: 20px;
+								color: $menu_item_light;
+							}
+
+							&>a {
+								font-size: 15px;
+								color: $menu_item_gray;
+								border: none;
+								text-decoration: underline;
+
+								&:hover {
+									color: $fast_link_item_gray;
+								}
+							}
+						}
+					}
+				}
+
+				@media (min-width: 1080px) {
+
+					&:hover>.drop-down,
+					.drop-down:hover {
+						display: flex;
+					}
 				}
 			}
 		}
@@ -214,7 +399,7 @@ $menu_bor_bot: #D60000;
 	padding: 20px 50px;
 
 	background-color: $footer_gray_bg;
-	font-family: 'Russo One';
+	font-family: 'Play';
 
 	.contacts {
 		display: flex;
@@ -474,7 +659,7 @@ $menu_bor_bot: #D60000;
 
 .copyright {
 	display: none;
-	font-family: 'Russo One';
+	font-family: 'Play';
 	//display: flex;
 	align-items: center;
 	justify-content: center;
