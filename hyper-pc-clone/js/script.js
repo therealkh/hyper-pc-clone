@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu-block');
 	document.addEventListener('click', (event) => {
-		//console.log(event.target);
 		if (event.target.closest('.burger')) {
 			burger.classList.toggle('active');
 			if (burger.classList.contains('active')) {
@@ -26,16 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	//document.addEventListener('mouseover', (event) => {
-	//	if (event.target.classList.contains('drop-down')) {
-	//		const drop_down = event.target;
-	//		const sub_sub_menu = drop_down.querySelector('.sub-sub-menu');
-	//		console.log(sub_sub_menu);
-	//		const dd_top = drop_down.getBoundingClientRect().top;
-	//		console.log(dd_top);
-	//	}
-	//})
-
 	window.addEventListener('resize', (event) => {
 		width = event.target.innerWidth;
 		if (width > 1080) {
@@ -44,14 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			menu.classList.remove('active');
 		}
 	});
-
-
-	//burger.addEventListener('click', () => {
-	//	burger.classList.toggle('active');
-	//	if (burger.classList.contains('active')) {
-	//		menu.classList.add('active');
-	//	} else {
-	//		menu.classList.remove('active');
-	//	}
-	//});
 })

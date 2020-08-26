@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu-block');
 	document.addEventListener('click', (event) => {
-		console.log(event.target);
 		if (event.target.closest('.burger')) {
 			burger.classList.toggle('active');
 			if (burger.classList.contains('active')) {
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				menu.style.display = 'none';
 			}, 300); //! таймаут должен совпадать с transition
 		}
-	})
+	});
 
 	window.addEventListener('resize', (event) => {
 		width = event.target.innerWidth;
@@ -34,14 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			menu.classList.remove('active');
 		}
 	});
-
-
-	//burger.addEventListener('click', () => {
-	//	burger.classList.toggle('active');
-	//	if (burger.classList.contains('active')) {
-	//		menu.classList.add('active');
-	//	} else {
-	//		menu.classList.remove('active');
-	//	}
-	//});
 })

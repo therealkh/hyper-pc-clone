@@ -405,7 +405,7 @@ $menu_bor_bot: #D60000;
 }
 
 .footer {
-	display: none;
+	//display: none;
 	padding: 20px 50px;
 
 	background-color: $footer_gray_bg;
@@ -511,6 +511,7 @@ $menu_bor_bot: #D60000;
 	&-nav {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 
 		&-col {
 			list-style: none;
@@ -668,7 +669,7 @@ $menu_bor_bot: #D60000;
 }
 
 .copyright {
-	display: none;
+	//display: none;
 	font-family: 'Play';
 	//display: flex;
 	align-items: center;
@@ -692,6 +693,7 @@ $menu_bor_bot: #D60000;
 
 	ul {
 		display: flex;
+		justify-content: center;
 		list-style: none;
 		margin: 0;
 		padding: 0;
