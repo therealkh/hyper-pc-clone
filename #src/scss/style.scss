@@ -761,6 +761,57 @@ body {
 
 		}
 	}
+
+	& .service{
+		background-color: $menu_item_dark;
+		color: $menu_item_light;
+		font-family: 'Play';
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1{
+			font-size: 20px;
+		}
+		p{
+			text-align: center;
+		}
+		&-list{
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style: none;
+			margin: 0;
+			padding: 0 50px;
+			li{
+				//border: 1px solid #fff;
+				margin: 10px;
+				padding: 20px 30px;
+				background-color: $footer_gray_bg;
+				border: 2px solid transparent;
+				transition: all .2s;
+				&:hover{
+					border: 2px solid $menu_bor_bot;
+				}
+				a{
+					color: $menu_item_light;
+					text-decoration: none;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					p{
+						font-size: 15px;
+						margin-top: 30px;
+					}
+					img{
+						width: 50px;
+					}
+				}
+				
+			}
+		}
+	}
 }
 .footer {
 	//display: none;
