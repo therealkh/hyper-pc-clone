@@ -1,3 +1,15 @@
+$(document).ready(function () {
+	$('.main-slider').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 6500,
+		fade: true
+	});
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	const burger = document.querySelector('.burger');
 	const menu = document.querySelector('.menu-block');
