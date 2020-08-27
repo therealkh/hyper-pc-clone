@@ -14,7 +14,7 @@ body {
 }
 
 .header-wrapper .header {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background: -o-linear-gradient(135deg, #fa0105 0%, #a00000 36%, #1b1b1b 36%);
   background: linear-gradient(-45deg, #fa0105 0%, #a00000 36%, #1b1b1b 36%);
   display: -webkit-box;
@@ -57,7 +57,7 @@ body {
 }
 
 .header-wrapper .header .burger.active span {
-  background-color: #D60000;
+  background-color: #d60000;
 }
 
 .header-wrapper .header .burger.active span:nth-child(2n-1) {
@@ -77,7 +77,7 @@ body {
 .header-wrapper .header .burger span {
   width: 100%;
   height: 3px;
-  background-color: #FFF;
+  background-color: #fff;
   position: absolute;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -137,11 +137,11 @@ body {
 }
 
 .header-wrapper .header .menu-block .menu-item-light a {
-  color: #FFF;
+  color: #fff;
 }
 
 .header-wrapper .header .menu-block .menu-item-light:hover a {
-  border-bottom: 2px solid #D60000;
+  border-bottom: 2px solid #d60000;
 }
 
 .header-wrapper .header .menu-block .menu-item-dark:nth-child(6) {
@@ -203,7 +203,7 @@ body {
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-menu {
-  font-family: 'Play';
+  font-family: "Play";
   font-weight: 500;
   position: relative;
   margin: 0;
@@ -215,7 +215,7 @@ body {
   padding: 0;
   width: 90%;
   border-color: #969696;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li {
@@ -239,7 +239,7 @@ body {
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li > a:hover {
-  background-color: #D60000;
+  background-color: #d60000;
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li.sub-menu-big {
@@ -315,7 +315,7 @@ body {
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-sub-menu-preview p {
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-sub-menu-preview > a {
@@ -326,7 +326,7 @@ body {
 }
 
 .header-wrapper .header .menu-block .menu li .drop-down .sub-sub-menu-preview > a:hover {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .header-wrapper .header .lang {
@@ -342,7 +342,7 @@ body {
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .main-slider {
@@ -370,7 +370,7 @@ body {
 
 .main-slider .slick-arrow {
   display: none !important;
-  opacity: .5;
+  opacity: 0.5;
   border: none;
   outline: none;
   cursor: pointer;
@@ -385,7 +385,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
-  opacity: .5;
+  opacity: 0.5;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -429,7 +429,7 @@ body {
   font-size: 0;
   width: 10px;
   height: 10px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 50%;
   margin: 5px;
   -webkit-transition: all 0.2s;
@@ -442,7 +442,7 @@ body {
 }
 
 .main-slider .slick-dots li.slick-active {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .main-slider-item {
@@ -503,9 +503,9 @@ body {
 }
 
 .main .computers-item > p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
 }
 
@@ -525,10 +525,10 @@ body {
 }
 
 .main .computers-item > span > a {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 15px;
   text-decoration: none;
-  opacity: .7;
+  opacity: 0.7;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -540,11 +540,11 @@ body {
 }
 
 .main .computers-item > span > a.more {
-  color: #D60000;
+  color: #d60000;
 }
 
 .main .computers-item > span > a.buy {
-  color: #FFF;
+  color: #fff;
 }
 
 .main .computers-item-img {
@@ -603,9 +603,9 @@ body {
 }
 
 .main .periphery-item > p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   font-size: 30px;
 }
 
@@ -625,10 +625,10 @@ body {
 }
 
 .main .periphery-item > span > a {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 25px;
   text-decoration: none;
-  opacity: .7;
+  opacity: 0.7;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -639,11 +639,11 @@ body {
 }
 
 .main .periphery-item > span > a.more {
-  color: #D60000;
+  color: #d60000;
 }
 
 .main .periphery-item > span > a.buy {
-  color: #FFF;
+  color: #fff;
 }
 
 .main .periphery-item-img {
@@ -676,8 +676,8 @@ body {
 
 .main .service {
   background-color: #000;
-  color: #FFF;
-  font-family: 'Play';
+  color: #fff;
+  font-family: "Play";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,17 +717,17 @@ body {
   padding: 20px 30px;
   background-color: #161616;
   border: 2px solid transparent;
-  -webkit-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .main .service-list li:hover {
-  border: 2px solid #D60000;
+  border: 2px solid #d60000;
 }
 
 .main .service-list li a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,10 +753,49 @@ body {
   width: 50px;
 }
 
+.main .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+}
+
+.main .features h1 {
+  color: #fff;
+}
+
+.main .features .features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .features .features-block .features-block-item {
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+  background-color: #969696;
+}
+
 .footer {
   padding: 20px 50px;
   background-color: #161616;
-  font-family: 'Play';
+  font-family: "Play";
 }
 
 .footer .contacts {
@@ -810,7 +849,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #FFF;
+  color: #fff;
 }
 
 .footer .contacts .social-link a p {
@@ -877,7 +916,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #FFF;
+  color: #fff;
 }
 
 .footer .contacts .phone-link a p {
@@ -932,7 +971,7 @@ body {
 }
 
 .footer-nav-col:nth-child(4) li:nth-child(2) a {
-  color: #FFF;
+  color: #fff;
   font-size: 13px;
 }
 
@@ -950,11 +989,11 @@ body {
 }
 
 .footer-nav-col li a:hover {
-  color: #D60000;
+  color: #d60000;
 }
 
 .footer-nav-col li:nth-child(1) a {
-  color: #FFF;
+  color: #fff;
   font-size: 11px;
 }
 
@@ -995,7 +1034,7 @@ body {
 
 .footer .fast-links h5 {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-weight: 500;
   font-size: 13px;
   margin-bottom: 10px;
@@ -1024,7 +1063,7 @@ body {
 }
 
 .footer .fast-links-list li:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -1039,7 +1078,7 @@ body {
 }
 
 .footer .fast-links-list li a {
-  color: #BDBDBD;
+  color: #bdbdbd;
   text-decoration: none;
   font-size: 14px;
 }
@@ -1087,7 +1126,7 @@ body {
 }
 
 .copyright {
-  font-family: 'Play';
+  font-family: "Play";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1104,7 +1143,7 @@ body {
 }
 
 .copyright p {
-  color: #FFF;
+  color: #fff;
   font-size: 11px;
   margin: 0;
 }
@@ -1139,7 +1178,7 @@ body {
 }
 
 .copyright ul li a {
-  color: #D60000;
+  color: #d60000;
   text-decoration: none;
   font-size: 10px;
   -webkit-transition: all 0.2s;
@@ -1148,7 +1187,7 @@ body {
 }
 
 .copyright ul li a:hover {
-  color: #FFF;
+  color: #fff;
 }
 
 @font-face {
@@ -1295,14 +1334,14 @@ body {
   }
 
   .header-wrapper .header .menu-block:before {
-    content: 'Меню';
+    content: "Меню";
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     top: 25px;
-    font-family: 'Play';
+    font-family: "Play";
     font-size: 25px;
     color: #fff;
   }
@@ -1327,11 +1366,11 @@ body {
   }
 
   .header-wrapper .header .menu-block .menu-item-dark a {
-    color: #FFF;
+    color: #fff;
   }
 
   .header-wrapper .header .menu-block .menu-item-dark:hover a {
-    border-bottom: 2px solid #D60000;
+    border-bottom: 2px solid #d60000;
   }
 
   .header-wrapper .header .menu-block .menu li {
