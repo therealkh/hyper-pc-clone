@@ -792,6 +792,420 @@ body {
   background-color: #969696;
 }
 
+.main .widgets {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.main .widgets .widget-btn {
+  width: 200px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Play";
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main .widgets .widget-btn:hover {
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+}
+
+.main .widgets .news-widget.widget {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.main .widgets .news-widget.widget h3 {
+  font-family: "Montserrat";
+  padding-left: 30px;
+  position: relative;
+}
+
+.main .widgets .news-widget.widget h3:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0px;
+  background-image: url(../img/newspaper.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .news-widget.widget .news-widget-tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  font-family: "Play";
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.main .widgets .news-widget.widget .news-widget-tabs li {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main .widgets .news-widget.widget .news-widget-tabs li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 12px;
+  color: inherit;
+  opacity: 0.7;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.main .widgets .news-widget.widget .news-widget-tabs li a.active,
+.main .widgets .news-widget.widget .news-widget-tabs li a:hover {
+  opacity: 1;
+  border-bottom: 2px solid white;
+}
+
+.main .widgets .news-widget.widget .news-widget-news ul {
+  list-style: none;
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.main .widgets .news-widget.widget .news-widget-news li {
+  padding: 15px 15px 15px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  font-family: "Play";
+}
+
+.main .widgets .news-widget.widget .news-widget-news li:hover {
+  background-color: #161616;
+  border-bottom: 1px solid white;
+}
+
+.main .widgets .news-widget.widget .news-widget-news li .news-date {
+  position: relative;
+  padding-left: 23px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main .widgets .news-widget.widget .news-widget-news li .news-date:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/date.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .news-widget.widget .news-widget-news li a {
+  font-size: 12px;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+}
+
+.main .widgets .news-widget.widget .news-widget-news li a:hover {
+  text-decoration: underline;
+}
+
+.main .widgets .ig-widget.widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+}
+
+.main .widgets .ig-widget.widget h3 {
+  font-family: "Montserrat";
+  padding-left: 40px;
+  position: relative;
+}
+
+.main .widgets .ig-widget.widget h3:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 10px;
+  background-image: url(../img/instagram-logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .ig-widget.widget p {
+  font-family: "Play";
+  font-size: 13px;
+  position: relative;
+  margin: 0 0 10px 10px;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .ig-widget-item {
+  width: 120px;
+  margin: 5px;
+  position: relative;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 30px);
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 10px 10px 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .likes,
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .comments {
+  font-size: 13px;
+  color: #fff;
+  font-family: "Play";
+  position: relative;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .likes:before,
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .comments:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 16px;
+  left: -20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .likes:before {
+  background-image: url(../img/like.svg);
+}
+
+.main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments .comments:before {
+  background-image: url(../img/comment.svg);
+}
+
+.main .widgets .yt-widget.widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+}
+
+.main .widgets .yt-widget.widget h3 {
+  font-family: "Montserrat";
+  padding-left: 40px;
+  position: relative;
+}
+
+.main .widgets .yt-widget.widget h3:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 10px;
+  background-image: url(../img/youtube-logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .yt-widget.widget p {
+  font-family: "Play";
+  font-size: 13px;
+  position: relative;
+  margin: 0 0 10px 10px;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .yt-widget-item {
+  position: relative;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 10px 10px 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-family: "Play";
+  font-weight: 400;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .likes,
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .views {
+  font-size: 13px;
+  color: #fff;
+  font-family: "Play";
+  position: relative;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .likes:before,
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .views:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 16px;
+  left: -20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .likes:before {
+  background-image: url(../img/yt-like.svg);
+}
+
+.main .widgets .yt-widget.widget .yt-widget-block .likes-n-views .views:before {
+  background-image: url(../img/view.svg);
+}
+
 .footer {
   padding: 20px 50px;
   background-color: #161616;
@@ -1246,6 +1660,28 @@ body {
   }
 }
 
+@media (min-width: 1025px) {
+  .main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .main .widgets .ig-widget.widget .ig-widget-block .likes-n-comments:hover {
+    opacity: 1;
+  }
+
+  .main .widgets .yt-widget.widget .yt-widget-block .likes-n-views {
+    opacity: 0;
+  }
+
+  .main .widgets .yt-widget.widget .yt-widget-block .likes-n-views:hover {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 1080px) {
   .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li:hover > .sub-sub-menu,
   .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li .sub-sub-menu:hover {
@@ -1414,6 +1850,10 @@ body {
   .main .periphery-item > span > a {
     font-size: 20px;
   }
+
+  .main .widgets .ig-widget.widget .ig-widget-block .ig-widget-item {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1464,6 +1904,12 @@ body {
 
   .footer .fast-links-list li a {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 770px) {
+  .main .widgets .ig-widget.widget {
+    width: 300px;
   }
 }
 
@@ -1589,6 +2035,12 @@ body {
 
   .main .periphery-item > span > a {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 340px) {
+  .main .widgets {
+    padding: 0 18px;
   }
 }
 

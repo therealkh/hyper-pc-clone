@@ -18,6 +18,19 @@ $footer_gray_bg: #161616;
 $computers-item-bg: #111111;
 
 $menu_bor_bot: #d60000;
+
+@mixin max-text-lines($n) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+  line-clamp: $n;
+  box-orient: vertical;
+}
+
 * {
   //box-sizing: border-box;
 }
@@ -27,7 +40,6 @@ body {
   position: relative;
 }
 
-//TODO сделать fixed через JS
 .header-wrapper {
   padding: 0;
   margin: 0;
@@ -804,7 +816,7 @@ body {
     }
   }
 
-  .features {
+  & .features {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -826,6 +838,348 @@ body {
         height: 300px;
         margin: 15px;
         background-color: $menu_item_gray;
+      }
+    }
+  }
+
+  .widgets {
+    background-color: $menu_item_dark;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    @media (max-width: 340px) {
+      padding: 0 18px;
+    }
+    .widget-btn {
+      width: 200px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 10px;
+      border: 1px solid $menu_item_light;
+      color: $menu_item_light;
+      text-decoration: none;
+      font-family: "Play";
+      transition: all 0.2s;
+
+      &:hover {
+        border-radius: 5px;
+        background-color: $menu_item_light;
+        color: $menu_item_dark;
+      }
+      &:active {
+      }
+      &:focus {
+      }
+    }
+    .news-widget.widget {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      color: $menu_item_light;
+      h3 {
+        font-family: "Montserrat";
+        padding-left: 30px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 0px;
+          //border: 1px solid #0f0;
+          background-image: url(../img/newspaper.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      .news-widget-tabs {
+        ul {
+          display: flex;
+          list-style: none;
+          height: 30px;
+          margin: 0;
+          padding: 0;
+          font-family: "Play";
+          border-bottom: 2px solid rgba($color: $menu_item_light, $alpha: 0.7);
+        }
+        li {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          a {
+            display: flex;
+            padding: 0 5px;
+            align-items: center;
+            height: 100%;
+            font-size: 12px;
+            color: inherit;
+            opacity: 0.7;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            &.active,
+            &:hover {
+              opacity: 1;
+              border-bottom: 2px solid rgba($color: $menu_item_light, $alpha: 1);
+            }
+
+            &:active {
+            }
+            &:focus {
+            }
+          }
+        }
+      }
+      .news-widget-news {
+        ul {
+          list-style: none;
+          font-family: "Montserrat";
+          margin: 0;
+          padding: 20px 0 0 0;
+        }
+        li {
+          padding: 15px 15px 15px 10px;
+          border-bottom: 1px solid rgba($color: $menu_item_light, $alpha: 0.2);
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            background-color: $footer_gray_bg;
+            border-bottom: 1px solid rgba($color: $menu_item_light, $alpha: 1);
+          }
+          font-family: "Play";
+          .news-date {
+            position: relative;
+            padding-left: 23px;
+            box-sizing: content-box;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: block;
+            &:after {
+              content: "";
+              width: 14px;
+              height: 14px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-image: url(../img/date.svg);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+          a {
+            font-size: 12px;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            @include max-text-lines(1);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .ig-widget.widget {
+      display: flex;
+      width: 400px;
+      @media (max-width: 770px) {
+        width: 300px;
+      }
+      color: $menu_item_light;
+      flex-direction: column;
+      margin: 0 10px;
+      h3 {
+        font-family: "Montserrat";
+        padding-left: 40px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 10px;
+          background-image: url(../img/instagram-logo.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      p {
+        font-family: "Play";
+        font-size: 13px;
+        position: relative;
+        margin: 0 0 10px 10px;
+      }
+      .ig-widget-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .ig-widget-item {
+          width: 120px;
+          margin: 5px;
+          position: relative;
+          @media (max-width: 1024px) {
+            margin-bottom: 30px;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .likes-n-comments {
+          @media (min-width: 1025px) {
+            //flex-direction: column;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            opacity: 0;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          position: absolute;
+          width: 100%;
+          height: calc(100% + 30px);
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: flex-end;
+          box-sizing: border-box;
+          padding: 10px 10px 10px 30px;
+          justify-content: space-between;
+          text-decoration: none;
+          .likes,
+          .comments {
+            font-size: 13px;
+            color: $menu_item_light;
+            font-family: "Play";
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 16px;
+              left: -20px;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+          .likes:before {
+            background-image: url(../img/like.svg);
+          }
+          .comments:before {
+            background-image: url(../img/comment.svg);
+          }
+        }
+      }
+    }
+
+    .yt-widget.widget {
+      display: flex;
+      width: 300px;
+      color: $menu_item_light;
+      flex-direction: column;
+      margin: 0 10px;
+      h3 {
+        font-family: "Montserrat";
+        padding-left: 40px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 10px;
+          background-image: url(../img/youtube-logo.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      p {
+        font-family: "Play";
+        font-size: 13px;
+        position: relative;
+        margin: 0 0 10px 10px;
+      }
+      .yt-widget-block {
+        .yt-widget-item {
+          position: relative;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .likes-n-views {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: flex;
+          //flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 10px 10px 10px 30px;
+          box-sizing: border-box;
+          background-color: rgba($color: #000000, $alpha: 0.7);
+          transition: all 0.3s;
+          text-decoration: none;
+          @media (min-width: 1025px) {
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          h2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            font-family: "Play";
+            font-weight: 400;
+            width: 100%;
+            color: $menu_item_light;
+            text-decoration: none;
+            margin: 10px;
+            //height: 100%;
+            @include max-text-lines(2);
+          }
+          .likes,
+          .views {
+            font-size: 13px;
+            color: $menu_item_light;
+            font-family: "Play";
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 16px;
+              left: -20px;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+          .likes:before {
+            background-image: url(../img/yt-like.svg);
+          }
+          .views:before {
+            background-image: url(../img/view.svg);
+          }
+        }
       }
     }
   }
