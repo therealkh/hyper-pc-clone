@@ -1,5 +1,4 @@
-
-let project_folder = require("path").basename(__dirname);
+let project_folder = require("path").basename(__dirname + '/docs');
 let source_folder = "#src";
 
 let fs = require('fs');
@@ -30,7 +29,10 @@ let path = {
 	clean: "./" + project_folder + "/"
 }
 
-let { src, dest } = require('gulp'),
+let {
+	src,
+	dest
+} = require('gulp'),
 	gulp = require('gulp'),
 	// browsersync = require("browser-sync").create(),
 	fileinclude = require("gulp-file-include"),
@@ -65,7 +67,7 @@ function html() {
 		.pipe(fileinclude())
 		.pipe(webphtml())
 		.pipe(dest(path.build.html))
-		// .pipe(browsersync.stream())
+	// .pipe(browsersync.stream())
 }
 
 function css() {
@@ -93,7 +95,7 @@ function css() {
 			})
 		)
 		.pipe(dest(path.build.css))
-		// .pipe(browsersync.stream())
+	// .pipe(browsersync.stream())
 }
 
 function js() {
@@ -109,14 +111,15 @@ function js() {
 			})
 		)
 		.pipe(dest(path.build.js))
-		// .pipe(browsersync.stream())
+	// .pipe(browsersync.stream())
 }
+
 function jslibs() {
 	console.log('JS libs ported');
 	return src(path.src.jslibs)
 		.pipe(fileinclude())
 		.pipe(dest(path.build.jslibs));
-	
+
 	// .pipe(browsersync.stream())
 }
 
@@ -132,13 +135,15 @@ function images() {
 		.pipe(
 			imagemin({
 				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
+				svgoPlugins: [{
+					removeViewBox: false
+				}],
 				interlaced: true,
 				optimizationLevel: 3 // 0 to 7
 			})
 		)
 		.pipe(dest(path.build.img))
-		// .pipe(browsersync.stream())
+	// .pipe(browsersync.stream())
 }
 
 function fonts() {
@@ -163,12 +168,11 @@ gulp.task('svgSprite', function () {
 		.pipe(svgSprite({
 			mode: {
 				stack: {
-					sprite: "../icons/icons.svg",  //sprite file name
+					sprite: "../icons/icons.svg", //sprite file name
 					example: true
 				}
 			},
-		}
-		))
+		}))
 		.pipe(dest(path.build.img))
 })
 
@@ -203,7 +207,7 @@ function watchFiles(params) {
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.img], images);
 	console.log("Watchin files...//");
-	
+
 }
 
 function clean(params) {
@@ -211,7 +215,7 @@ function clean(params) {
 }
 
 let build = gulp.series(clean, gulp.parallel(js, jslibs, css, html, images, fonts), fontsStyle);
-let watch = gulp.parallel(build, watchFiles, /*browserSync*/);
+let watch = gulp.parallel(build, watchFiles, /*browserSync*/ );
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
