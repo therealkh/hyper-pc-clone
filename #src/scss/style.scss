@@ -1038,6 +1038,7 @@ body {
         .likes-n-comments {
           @media (min-width: 1025px) {
             //flex-direction: column;
+            height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.7);
             opacity: 0;
             transition: all 0.3s;
