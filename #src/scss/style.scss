@@ -622,6 +622,7 @@ body {
 					text-decoration: none;
 					opacity: .7;
 					transition: all 0.2s;
+					font-weight: 700;
 					@media (max-width: 1180px) {
 						font-size: 13px;
 					}
@@ -633,11 +634,9 @@ body {
 					}
 					&.more{
 						color: $menu_bor_bot;
-						font-weight: 700;
 					}
 					&.buy{
 						color: $menu_item_light;
-						font-weight: 700;
 					}
 
 				}
@@ -647,16 +646,115 @@ body {
 				//@media (max-width: 980px) {
 				//	height: 280px;
 				//}
-				display: block;
+				flex-grow: 1;
 				object-fit: contain;
 				display: flex;
 				picture{
 					width: 100%;
-					height: 100%;
+					//height: 100%;
 				}
 				img{
 					width: 100%;
-					height: 100%;
+					//height: 100%;
+					object-fit: contain;
+				}
+			}
+
+		}
+	}
+	& .periphery{
+		padding: 20px 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		background-color: $footer_gray_bg;
+		&-item{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 45%;
+			height: 500px;
+			@media (max-width: 1200px) {
+				height: 420px;
+			}
+			@media (max-width: 1024px) {
+				height: 400px;
+			}
+			@media (max-width: 500px) {
+				height: 300px;
+			}
+			@media (max-width: 380px) {
+				height: 250px;
+			}
+			@media (max-width: 768px) {
+				width: 90%;
+			}
+			
+			background-color: $computers-item-bg;
+			margin: 5px;
+			&>p{
+				font-family: 'Montserrat';
+				text-transform: uppercase;
+				color: $menu_item_light;
+				font-size: 30px;
+				@media (max-width: 1024px) {
+					font-size: 25px;
+				}
+				@media (max-width: 768px) {
+					font-size: 20px;
+				}
+			}
+			&>span{
+				background: $gradient;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				padding: 10px 20px;
+				box-sizing: border-box;
+				&>a{
+					font-family: 'Montserrat';
+					font-size: 25px;
+					text-decoration: none;
+					opacity: .7;
+					transition: all 0.2s;
+					@media (max-width: 1024px) {
+						font-size: 20px;
+					}
+					@media (max-width: 768px) {
+						font-size: 15px;
+						font-weight: 700;
+					}
+					@media (max-width: 380px) {
+						font-size: 13px;
+					}
+					&:hover{
+						opacity: 1;
+					}
+					&.more{
+						color: $menu_bor_bot;
+					}
+					&.buy{
+						color: $menu_item_light;
+					}
+
+				}
+			}
+			&-img{
+				flex-shrink: 1;
+				width: 100%;
+				object-fit: contain;
+				display: flex;
+				flex-grow: 1;
+				align-items: center;
+				overflow: hidden;
+				picture{
+					width: 100%;
+					//height: 100%;
+				}
+				img{
+					width: 100%;
+					//height: 100%;
 					object-fit: contain;
 				}
 			}

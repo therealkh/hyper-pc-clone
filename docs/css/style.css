@@ -532,6 +532,7 @@ body {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  font-weight: 700;
 }
 
 .main .computers-item > span > a:hover {
@@ -540,17 +541,17 @@ body {
 
 .main .computers-item > span > a.more {
   color: #D60000;
-  font-weight: 700;
 }
 
 .main .computers-item > span > a.buy {
   color: #FFF;
-  font-weight: 700;
 }
 
 .main .computers-item-img {
   width: 100%;
-  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -o-object-fit: contain;
      object-fit: contain;
   display: -webkit-box;
@@ -560,12 +561,115 @@ body {
 
 .main .computers-item-img picture {
   width: 100%;
-  height: 100%;
 }
 
 .main .computers-item-img img {
   width: 100%;
-  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main .periphery {
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #161616;
+}
+
+.main .periphery-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  height: 500px;
+  background-color: #111111;
+  margin: 5px;
+}
+
+.main .periphery-item > p {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 30px;
+}
+
+.main .periphery-item > span {
+  background: -o-linear-gradient(135deg, #fa0105 0%, #a00000 50%, #1b1b1b 50%);
+  background: linear-gradient(-45deg, #fa0105 0%, #a00000 50%, #1b1b1b 50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .periphery-item > span > a {
+  font-family: 'Montserrat';
+  font-size: 25px;
+  text-decoration: none;
+  opacity: .7;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main .periphery-item > span > a:hover {
+  opacity: 1;
+}
+
+.main .periphery-item > span > a.more {
+  color: #D60000;
+}
+
+.main .periphery-item > span > a.buy {
+  color: #FFF;
+}
+
+.main .periphery-item-img {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main .periphery-item-img picture {
+  width: 100%;
+}
+
+.main .periphery-item-img img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1076,6 +1180,12 @@ body {
   }
 }
 
+@media (max-width: 1200px) {
+  .main .periphery-item {
+    height: 420px;
+  }
+}
+
 @media (max-width: 1180px) {
   .main .computers-item > span > a {
     font-size: 13px;
@@ -1174,6 +1284,20 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .main .periphery-item {
+    height: 400px;
+  }
+
+  .main .periphery-item > p {
+    font-size: 25px;
+  }
+
+  .main .periphery-item > span > a {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .main .computers {
     -webkit-box-pack: center;
@@ -1230,6 +1354,19 @@ body {
     width: 30px;
     height: 50px;
   }
+
+  .main .periphery-item {
+    width: 90%;
+  }
+
+  .main .periphery-item > p {
+    font-size: 20px;
+  }
+
+  .main .periphery-item > span > a {
+    font-size: 15px;
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1259,6 +1396,12 @@ body {
 @media (max-width: 570px) {
   .footer .partners ul li a img {
     width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main .periphery-item {
+    height: 300px;
   }
 }
 
@@ -1318,6 +1461,16 @@ body {
 
   .footer-nav-col li a {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .main .periphery-item {
+    height: 250px;
+  }
+
+  .main .periphery-item > span > a {
+    font-size: 13px;
   }
 }
 
