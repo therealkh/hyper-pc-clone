@@ -67,13 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ***************[возврат меню в хедер при изминении ширины окна]************ */
   window.addEventListener('resize', (event) => {
     width = event.target.innerWidth;
+    console.log(width);
     if (width > 1080) {
       menu.style.display = 'block';
-    } else if (width == 1080) {
+    } else {
       menu.classList.remove('active');
+      setTimeout(() => {
+        menu.style.display = 'none';
+      }, 300); //! таймаут должен совпадать с transition
     }
   });
-
+  width = document.documentElement.clientWidth;
+  console.log('-' + width);
+  if (width > 1080) {
+    menu.style.display = 'block';
+  } else {
+    menu.classList.remove('active');
+    menu.style.display = 'none';
+    console.log(menu.style.display);
+  }
 
 
 })

@@ -694,8 +694,9 @@ body {
   font-size: 20px;
 }
 
-.main .service p {
+.main .service > p {
   text-align: center;
+  padding: 10px;
 }
 
 .main .service-list {
@@ -715,6 +716,7 @@ body {
 .main .service-list li {
   margin: 10px;
   padding: 20px 30px;
+  width: 160px;
   background-color: #161616;
   border: 2px solid transparent;
   -webkit-transition: all 0.2s;
@@ -747,6 +749,11 @@ body {
 .main .service-list li a p {
   font-size: 15px;
   margin-top: 30px;
+  width: 100%;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .main .service-list li a img {
@@ -1617,9 +1624,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1627,6 +1635,7 @@ body {
 .footer-nav-col {
   list-style: none;
   padding: 0 10px;
+  white-space: nowrap;
 }
 
 .footer-nav-col:nth-child(1) {
@@ -1713,6 +1722,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1722,11 +1733,7 @@ body {
   position: relative;
   list-style: none;
   margin: 10px 0;
-  margin-left: 50px;
-}
-
-.footer .fast-links-list li:nth-child(1) {
-  margin-left: 27.5px;
+  padding-left: 50px;
 }
 
 .footer .fast-links-list li:before {
@@ -1734,7 +1741,7 @@ body {
   position: absolute;
   width: 16px;
   height: 16px;
-  left: -25px;
+  left: 20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -2089,10 +2096,6 @@ body {
             flex-direction: column;
   }
 
-  .footer .fast-links-list li {
-    margin-left: 27.5px;
-  }
-
   .footer .partners {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2165,6 +2168,12 @@ body {
             justify-content: flex-start;
   }
 
+  .footer-nav-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
   .footer .fast-links-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2179,12 +2188,12 @@ body {
   }
 
   .footer .fast-links-list li {
-    margin-left: 50px;
+    padding-left: 50px;
     font-size: 10px;
   }
 
   .footer .fast-links-list li {
-    margin-left: 27.5px;
+    padding-left: 40px;
     font-size: 14px;
   }
 
@@ -2262,18 +2271,30 @@ body {
   }
 }
 
-@media (max-width: 620px) {
-  .footer .fast-links-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 @media (max-width: 570px) {
   .footer .partners ul li a img {
     width: 100px;
+  }
+}
+
+@media (max-width: 540px) {
+  .main .service-list {
+    padding: 0 20px;
+  }
+
+  .main .service-list li {
+    width: 95px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .main .service-list li a p {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .main .service-list li a img {
+    width: 30px;
   }
 }
 
@@ -2338,6 +2359,30 @@ body {
 }
 
 @media (max-width: 415px) {
+  .footer .contacts .social-link a p {
+    font-size: 11px;
+  }
+
+  .footer .contacts .social-link a p span {
+    font-size: 9px;
+  }
+
+  .footer .contacts .social-logo {
+    width: 24px;
+  }
+
+  .footer .contacts .phone-link a p {
+    font-size: 11px;
+  }
+
+  .footer .contacts .phone-link a p span {
+    font-size: 9px;
+  }
+
+  .footer .contacts .phone-logo {
+    width: 24px;
+  }
+
   .footer .partners {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2353,12 +2398,25 @@ body {
 }
 
 @media (max-width: 400px) {
+  .main .service > p {
+    font-size: 13px;
+    margin: 0;
+  }
+
   .periphery-page .items-block .items {
     width: 250px;
   }
 
   .notebooks-page .notebook-select .notebook-select-block .notebook-select-items .items {
     width: 250px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer .contacts .social {
+    margin-bottom: 30px;
   }
 
   .footer-nav {
