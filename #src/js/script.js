@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //! **************[TABS]**************
     if (event.target.classList.contains('tab-nav')) {
+      console.log(event.target);
       const currentTabNav = event.target;
       const parent = event.target.parentElement;
       const tabNav = parent.querySelectorAll('.tab-nav');
       const tabNavID = currentTabNav.getAttribute('data-tab-nav-id');
-      const tabContent = parent.parentElement.parentElement.querySelector('.tab-content-wrapper').querySelectorAll('.tab-content');
-      //console.log(tabContent);
+      const tabContent = parent.parentElement.querySelector('.tab-content-wrapper').querySelectorAll('.tab-content');
       tabNav.forEach((item) => {
         item.classList.remove('tab-nav-active');
       });
