@@ -1196,12 +1196,20 @@ body {
     h1{
       color: $menu_item_light;
       font-family: 'Montserrat';
+      text-align: center;
+      @media (max-width: 435px) {
+        font-size: 25px;
+      }
     }
     p {
       font-family: 'Montserrat';
       color: $menu_item_light;
       margin-bottom: 0;
+      padding: 10px 10px 0 10px;
       text-align: center;
+      @media (max-width: 675px) {
+        font-size: 13px;
+      }
     }
     img{
       width: 100%;
@@ -1211,12 +1219,33 @@ body {
       flex-wrap: wrap;
       justify-content: center;
       padding: 10px 100px;
+      @media (max-width: 780px) {
+        padding: 10px 20px;
+      }
       //border: 1px solid red;
       .items {
         padding: 30px;
         margin: 10px;
         //border: 1px solid red;
         width: 300px;
+        @media (max-width: 960px) {
+          width: 250px;
+        }
+        @media (max-width: 860px) {
+          padding: 10px;
+        }
+        @media (max-width: 780px) {
+          width: 200px;
+        }
+        @media (max-width: 520px) {
+          width: 300px;
+        }
+        @media (max-width: 400px) {
+          width: 250px;
+        }
+        @media (max-width: 350px) {
+          width: 200px;
+        }
         a{
           display: flex;
           height: 100%;
