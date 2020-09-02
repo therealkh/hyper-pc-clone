@@ -135,19 +135,18 @@ document.addEventListener('DOMContentLoaded', () => {
       dropDown.forEach((item) => {
         item.style.height = 'unset';
       });
+      document.querySelector('.header-wrapper').style.overflowX = 'unset';
     }
   });
   let menuItems = document.querySelectorAll('.menu-block>ul>li');
   menuItems.forEach((item) => {
     if (item.querySelector('.drop-down')) {
-      console.log(123);
       item.classList.add('has-sub-menu');
     }
   });
   let subMenuItems = document.querySelectorAll('.menu-block>ul>li .drop-down ul>li');
   subMenuItems.forEach((item) => {
     if (item.querySelector('.sub-sub-menu')) {
-      console.log(123);
       item.classList.add('has-sub-menu');
     }
   });
