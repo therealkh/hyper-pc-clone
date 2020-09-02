@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.style.right = `65px`;
         document.querySelector('body').style.overflow = 'unset';
         document.querySelector('.body-wrapper').classList.remove('on-menu-open');
+        document.querySelector('.header-wrapper').style.overflowX = 'hidden';
       }
     } else if (burger.classList.contains('active') && !event.target.closest('.menu-block')) {
       bodyWrapper.style.left = 0;
       burger.style.right = `65px`;
       document.querySelector('body').style.overflow = 'unset';
       document.querySelector('.body-wrapper').classList.remove('on-menu-open');
+      document.querySelector('.header-wrapper').style.overflowX = 'hidden';
       burger.classList.remove('active');
     }
     //! ***********[MENU SIDEBAR]***********
