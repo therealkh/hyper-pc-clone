@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // **********[ANY CLICK ON PAGE]*************
   document.addEventListener('click', (event) => {
 
-    console.log(event.target);
+    //console.log(event.target);
     //! ***********[BURGER]*********** 
     if (event.target.closest('.burger')) {
       burger.classList.toggle('active');
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     //! **************[TABS]**************
     if (event.target.classList.contains('tab-nav')) {
-      console.log(event.target);
       const currentTabNav = event.target;
       const parent = event.target.parentElement;
       const tabNav = parent.querySelectorAll('.tab-nav');
@@ -128,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (width > 1080) {
       let subSub = document.querySelectorAll('.menu .sub-sub-menu');
       let dropDown = document.querySelectorAll('.menu .drop-down');
-      console.log(subSub);
       subSub.forEach((item) => {
         item.style.height = 'unset';
       });
@@ -136,6 +134,32 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.height = 'unset';
       });
       document.querySelector('.header-wrapper').style.overflowX = 'unset';
+    }
+    else {
+      let menuItems = document.querySelectorAll('.menu-block>ul>li');
+      menuItems.forEach((item) => {
+        if (item.querySelector('.drop-down')) {
+          const sub_menu = item.querySelector('.drop-down');
+          sub_menu.style.height = 0;
+          sub_menu.querySelector('.sub-sub-menu').classList.remove('opened');
+          sub_menu.querySelectorAll('.sub-menu>li').forEach((item) => {
+            item.classList.remove('has-opened-sub-menu');
+          });
+          sub_menu.querySelector('.sub-sub-menu').style.height = 0;
+          clicked_item.classList.remove('has-opened-sub-menu');
+        }
+      });
+      let subMenuItems = document.querySelectorAll('.menu-block>ul>li .drop-down ul>li');
+      subMenuItems.forEach((item) => {
+        if (item.querySelector('.sub-sub-menu')) {
+          const sub_menu = item.querySelector('.sub-sub-menu');
+          sub_menu.style.height = 0;
+          let parentHeight = sub_menu.closest('.drop-down').offsetHeight;
+          parentHeight -= height;
+          sub_menu.closest('.drop-down').style.height = `${parentHeight}px`;
+          clicked_item.classList.remove('has-opened-sub-menu');
+        }
+      });
     }
   });
   let menuItems = document.querySelectorAll('.menu-block>ul>li');
