@@ -12,6 +12,7 @@ main.on-burger-open {
   position: relative;
   z-index: 9999;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .header-wrapper .header {
@@ -51,9 +52,9 @@ main.on-burger-open {
   display: none;
   width: 35px;
   height: 20px;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .header-wrapper .header .burger.active {
@@ -84,9 +85,9 @@ main.on-burger-open {
   height: 3px;
   background-color: #fff;
   position: absolute;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .header-wrapper .header .burger span:nth-child(1) {
@@ -165,11 +166,8 @@ main.on-burger-open {
   position: relative;
 }
 
-.header-wrapper .header .menu-block .menu li {
-  list-style: none;
-  margin: 0 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.header-wrapper .header .menu-block .menu > li a {
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,8 +176,11 @@ main.on-burger-open {
           align-items: center;
 }
 
-.header-wrapper .header .menu-block .menu li a {
-  text-decoration: none;
+.header-wrapper .header .menu-block .menu li {
+  list-style: none;
+  margin: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,9 +457,9 @@ main.on-burger-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -578,10 +579,10 @@ main.on-burger-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 45%;
-  height: 500px;
+  width: 500px;
+  height: 400px;
   background-color: #111111;
-  margin: 5px;
+  margin: 20px 5px;
 }
 
 .main .periphery-item > p {
@@ -2394,6 +2395,12 @@ main.on-burger-open {
   }
 }
 
+@media (min-width: 1080px) {
+  .header-wrapper {
+    overflow-x: unset;
+  }
+}
+
 @media (min-width: 1081px) {
   .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li:hover > .sub-sub-menu,
   .header-wrapper .header .menu-block .menu li .drop-down .sub-menu li .sub-sub-menu:hover {
@@ -2435,7 +2442,7 @@ main.on-burger-open {
     font-size: 10px;
   }
 
-  .header-wrapper .header .menu-block .menu li a {
+  .header-wrapper .header .menu-block .menu > li > a {
     font-size: 10px;
   }
 }
@@ -2447,10 +2454,6 @@ main.on-burger-open {
 }
 
 @media (max-width: 1200px) {
-  .main .periphery-item {
-    height: 420px;
-  }
-
   .desktops-page .processors-item {
     height: 420px;
   }
@@ -2489,12 +2492,9 @@ main.on-burger-open {
     left: 0;
     top: 0;
     z-index: 99999;
+    background: rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
-  }
-
-  .header-wrapper {
-    overflow-x: hidden;
   }
 
   .header-wrapper .header .burger {
@@ -2773,10 +2773,6 @@ main.on-burger-open {
 }
 
 @media (max-width: 1024px) {
-  .main .periphery-item {
-    height: 400px;
-  }
-
   .main .periphery-item > p {
     font-size: 25px;
   }
@@ -2946,10 +2942,6 @@ main.on-burger-open {
     height: 50px;
   }
 
-  .main .periphery-item {
-    width: 90%;
-  }
-
   .main .periphery-item > p {
     font-size: 20px;
   }
@@ -3041,6 +3033,13 @@ main.on-burger-open {
   }
 }
 
+@media (max-width: 580px) {
+  .main .periphery-item {
+    width: 400px;
+    height: 320px;
+  }
+}
+
 @media (max-width: 570px) {
   .footer .partners ul li a img {
     width: 100px;
@@ -3083,10 +3082,6 @@ main.on-burger-open {
 }
 
 @media (max-width: 500px) {
-  .main .periphery-item {
-    height: 300px;
-  }
-
   .desktops-page .processors-item {
     height: 300px;
   }
@@ -3119,6 +3114,17 @@ main.on-burger-open {
 
   .footer .contacts .phone-link:nth-child(2) {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .main .periphery-item {
+    width: 320px;
+    height: 256px;
+  }
+
+  .main .periphery-item > p {
+    font-size: 15px;
   }
 }
 
@@ -3240,11 +3246,14 @@ main.on-burger-open {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 395px) {
   .main .periphery-item {
-    height: 250px;
+    width: 250px;
+    height: 200px;
   }
+}
 
+@media (max-width: 380px) {
   .main .periphery-item > span > a {
     font-size: 13px;
   }

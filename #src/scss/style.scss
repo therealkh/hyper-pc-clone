@@ -68,7 +68,7 @@ body {
         left: 0;
         top: 0;
         z-index: 99999;
-        //background: rgba($color: $menu_item_dark, $alpha: 0.7);
+        background: rgba($color: $menu_item_dark, $alpha: 0.5);
         backdrop-filter: blur(5px);
       }
     }
@@ -85,8 +85,9 @@ main{
   position: relative;
   z-index: 9999;
   width: 100%;
-  @media (max-width: 1080px) {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  @media (min-width: 1080px) {
+    overflow-x: unset;
   }
   .header {
     font-family: "Montserrat";
@@ -111,7 +112,7 @@ main{
       display: none;
       width: 35px;
       height: 20px;
-      transition: all 0.5s;
+      transition: all 0.2s;
       @media (max-width: 1080px) {
         display: block;
         position: absolute;
@@ -137,7 +138,7 @@ main{
         height: 3px;
         background-color: $menu_item_light;
         position: absolute;
-        transition: all 0.5s;
+        transition: all 0.2s;
         &:nth-child(1) {
           top: 0;
           left: 0;
@@ -205,6 +206,16 @@ main{
         }
         & > li {
           position: relative;
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+          }
+          &>a{
+            @media (max-width: 1290px) {
+              font-size: 10px;
+            }
+          }
         }
         li {
           list-style: none;
@@ -212,15 +223,7 @@ main{
           box-sizing: border-box;
           display: flex;
           align-items: center;
-          a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            @media (max-width: 1290px) {
-              font-size: 10px;
-            }
-            
-          }
+          
           .drop-down {
             padding: 10px 0;
             position: absolute;
@@ -672,7 +675,7 @@ main{
   & .computers {
     padding: 20px 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: $footer_gray_bg;
@@ -763,25 +766,22 @@ main{
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 45%;
-      height: 500px;
-      @media (max-width: 1200px) {
-        height: 420px;
-      }
-      @media (max-width: 1024px) {
-        height: 400px;
-      }
-      @media (max-width: 500px) {
-        height: 300px;
-      }
-      @media (max-width: 380px) {
-        height: 250px;
-      }
-      @media (max-width: 768px) {
-        width: 90%;
-      }
+      width: 500px;
+      height: 400px;
       background-color: $computers-item-bg;
-      margin: 5px;
+      margin: 20px 5px;
+      @media (max-width: 580px) {
+        width: 400px;
+        height: 320px;
+      }
+      @media (max-width: 470px) {
+        width: 320px;
+        height: 256px;
+      }
+      @media (max-width: 395px) {
+        width: 250px;
+        height: 200px;
+      }
       & > p {
         font-family: "Montserrat";
         text-transform: uppercase;
@@ -792,6 +792,9 @@ main{
         }
         @media (max-width: 768px) {
           font-size: 20px;
+        }
+        @media (max-width: 470px) {
+          font-size: 15px;
         }
       }
       & > span {
