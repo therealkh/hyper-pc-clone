@@ -1310,6 +1310,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 100px;
+    max-width: 1500px;
     @media (max-width: 780px) {
       padding: 10px 20px;
     }
@@ -1574,6 +1575,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 100px;
+    max-width: 1200px;
     @media (max-width: 780px) {
       padding: 10px 20px;
     }
