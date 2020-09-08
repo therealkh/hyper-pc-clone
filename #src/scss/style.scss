@@ -32,6 +32,7 @@ $fast_link_item_gray: #bdbdbd;
 $menu_item_dark: #000;
 $footer_gray_bg: #161616;
 $computers-item-bg: #111111;
+$orange: #D08F4B;
 
 $menu_bor_bot: #d60000;
 
@@ -1911,6 +1912,294 @@ main{
     }
   }
 }
+
+.cart-page{
+  padding-bottom: 40px;
+  h1{
+    color: $menu_item_light;
+    font-family: 'Play';
+    text-align: center;
+  }
+  &>.table-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &>table{
+      color: $menu_item_light;
+      font-family: 'Montserrat';
+      @media (min-width: 755px) {
+        border-collapse: collapse;
+        border-top: 4px solid transparent;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0;
+          transform: translateY(-100%);
+          width: 100%;
+          height: 4px;
+          background-image: $gradient_red;
+        }
+      }
+      td{
+        padding: 5px;
+      }
+      tr{
+        border-bottom: 1px solid $menu_bor_bot;
+      }
+      thead{
+        background-color: $footer_gray_bg;
+        tr{
+          border-bottom: none;
+          th{
+            font-weight: 300;
+            padding: 10px 10px;
+            font-size: 13px;
+            text-align-last: left;
+          }
+        }
+      }
+      @media (max-width: 754px) {
+        thead{
+          display: none;
+        }
+        tr{
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+      }
+    }
+  }
+  .cart-item-big{
+    display: flex;
+    align-items: center;
+    color: $menu_item_light;
+    font-family: 'Play';
+    //border: 1px solid #fff;
+    max-width: 400px;
+    &-img{
+      height: 60px;
+      width: 60px;
+    }
+    &-info{
+      display: flex;
+      flex-direction: column;
+      &>.name{
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0;
+      }
+      &>a.specs{
+        color: $menu_bor_bot;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-size: 13px;
+        margin: 5px 0;
+        &:hover{
+          color: $fast_link_item_gray;
+        }
+      }
+      .options{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        p{
+          font-size: 13px;
+          margin: 0;
+          background-color: $menu_item_gray;
+          color: $menu_item_light;
+          padding: 2px 5px;
+          display: flex;
+          &>a{
+            color: $menu_item_light;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 15px;
+            transition: all 0.3s;
+            height: 100%;
+            width: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: serif;
+            margin-left: 5px;
+            &:hover{
+              color: $menu_bor_bot;
+            }
+          }
+        }
+        &>a{
+          font-size: 0;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          margin: 0 10px;
+          background-image: url('../img/pen.svg');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          &:hover{
+            opacity: 1;
+          }
+        }
+
+      }
+    }
+  }
+  .cart-item-small {
+    display: flex;
+    align-items: center;
+    color: $menu_item_light;
+    font-family: 'Play';
+    //border: 1px solid #fff;
+    max-width: 400px;
+    &-img{
+      height: 60px;
+      width: 60px;
+    }
+    &-info{
+      display: flex;
+      flex-direction: column;
+      //justify-content: flex-start;
+      .type {
+        margin: 0;
+        color: $menu_item_gray;
+        font-size: 13px;
+      }
+      .name {
+        margin: 0;
+        color: $menu_item_light;
+        font-size: 15px;
+      }
+    }
+  }
+  .under-order{
+    font-family: 'Play';
+    color: $orange;
+    font-size: 15px;
+    text-align: center;
+    &>span{
+      display: block;
+      color: $menu_item_gray;
+      font-style: italic;
+      font-size: 12px;
+    }
+    @media (max-width: 754px) {
+      text-align-last: left;
+    }
+  }
+  .quantity-select{
+    background-color: $menu_item_dark;
+    border-radius: 3px;
+    border: 1px solid $menu_item_gray;
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    &>span{
+      text-align: center;
+      width: 20px;
+      border-left: 1px solid $menu_item_gray;
+      border-right: 1px solid $menu_item_gray;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button{
+      border-radius: 3px;
+      width: 20px;
+      background-color: $footer_gray_bg;
+      border: none;
+      color: $menu_item_gray;
+    }
+  }
+  .price{
+    color: $menu_item_gray;
+    font-family: 'Play';
+    font-size: 13px;
+  }
+  .price-sale{
+    color: $menu_item_gray;
+    font-family: 'Play';
+    font-size: 13px;
+    text-decoration: none;
+    span{
+      text-decoration: line-through;
+      display: block;
+    }
+  }
+  .td-delete-cart-item{
+    @media (max-width: 754px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .delete-cart-item{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/delete.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    cursor: pointer;
+  }
+  .avaible{
+    font-size: 13px;
+    color: $menu_item_gray;
+    text-align: center;
+    @media (max-width: 754px) {
+      text-align-last: left;
+    }
+  }
+  tr.summ-price{
+    color: $menu_item_light;
+    font-family: 'Play';
+    font-size: 20px;
+    text-align: center;
+    border-bottom: none!important;
+    width: 100%;
+    td{
+      p{
+        text-align: right;
+        font-size: 15px;
+      }
+    }
+  }
+  tr.order{
+    color: $menu_item_light;
+    font-family: 'Play';
+    font-size: 20px;
+    text-align: right;
+    border-bottom: none!important;
+    width: 100%;
+    td{
+      a{
+        color: $menu_item_light;
+        padding: 10px 20px;
+        text-decoration: none;
+        background: $gradient_red;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+picture{
+  &>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
 
 .footer {
   padding: 20px 50px;
