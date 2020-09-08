@@ -3356,8 +3356,7 @@ picture > img {
   }
 
   .cart-page .under-order {
-    -moz-text-align-last: left;
-         text-align-last: left;
+    text-align: left;
   }
 
   .cart-page .td-delete-cart-item {
@@ -3368,7 +3367,6 @@ picture > img {
 
   .cart-page .avaible {
     text-align: left;
-    border: 1px solid #fff;
   }
 }
 

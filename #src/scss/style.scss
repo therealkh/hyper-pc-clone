@@ -2087,7 +2087,7 @@ main{
       font-size: 12px;
     }
     @media (max-width: 754px) {
-      text-align-last: left;
+      text-align: left;
     }
   }
   .quantity-select{
@@ -2156,7 +2156,6 @@ main{
     text-align: center;
     @media (max-width: 754px) {
       text-align: left;
-      border: 1px solid #fff;
     }
   }
   tr.summ-price{
