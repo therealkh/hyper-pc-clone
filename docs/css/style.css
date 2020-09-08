@@ -2134,9 +2134,8 @@ main.on-burger-open {
 }
 
 .cart-page .quantity-select > span {
-  display: inline-block;
   text-align: center;
-  width: 20px !important;
+  width: 20px;
   border-left: 1px solid #969696;
   border-right: 1px solid #969696;
   font-size: 13px;
@@ -2152,9 +2151,8 @@ main.on-burger-open {
 }
 
 .cart-page .quantity-select button {
-  width: 20px !important;
   border-radius: 3px;
-  display: inline-block;
+  width: 20px;
   background-color: #161616;
   border: none;
   color: #969696;
