@@ -2099,7 +2099,7 @@ main{
     display: flex;
     justify-content: center;
     &>span{
-      //display: inline-block;
+      display: inline-block;
       text-align: center;
       width: 20px!important;
       border-left: 1px solid $menu_item_gray;
@@ -2112,7 +2112,7 @@ main{
     button{
       width: 20px!important;
       border-radius: 3px;
-      //display: inline-block;
+      display: inline-block;
       background-color: $footer_gray_bg;
       border: none;
       color: $menu_item_gray;
