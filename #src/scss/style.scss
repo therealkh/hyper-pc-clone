@@ -2099,8 +2099,9 @@ main{
     display: flex;
     justify-content: center;
     &>span{
+      //display: inline-block;
       text-align: center;
-      width: 20px;
+      width: 20px!important;
       border-left: 1px solid $menu_item_gray;
       border-right: 1px solid $menu_item_gray;
       font-size: 13px;
@@ -2109,8 +2110,9 @@ main{
       justify-content: center;
     }
     button{
+      width: 20px!important;
       border-radius: 3px;
-      width: 20px;
+      //display: inline-block;
       background-color: $footer_gray_bg;
       border: none;
       color: $menu_item_gray;
