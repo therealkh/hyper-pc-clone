@@ -2100,11 +2100,11 @@ main{
     justify-content: center;
     @media (max-width: 754px){
       height: 30px;
-      width: 90px;
+      width: 120px;
     }
     &>span{
       text-align: center;
-      width: 20px;
+      width: 60px;
       border-left: 1px solid $menu_item_gray;
       border-right: 1px solid $menu_item_gray;
       font-size: 13px;
@@ -2114,11 +2114,12 @@ main{
     }
     &>button{
       border-radius: 3px;
-      width: 20px;
+      width: 60px;
       padding: 0;
       background-color: $footer_gray_bg;
       border: none;
       color: $menu_item_gray;
+      font-size: 25px;
     }
   }
   .price{
