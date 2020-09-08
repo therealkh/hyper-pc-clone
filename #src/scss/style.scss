@@ -2155,7 +2155,7 @@ main{
     color: $menu_item_gray;
     text-align: center;
     @media (max-width: 754px) {
-      text-align-last: left;
+      text-align: left;
     }
   }
   tr.summ-price{

@@ -3367,8 +3367,7 @@ picture > img {
   }
 
   .cart-page .avaible {
-    -moz-text-align-last: left;
-         text-align-last: left;
+    text-align: left;
   }
 }
 
