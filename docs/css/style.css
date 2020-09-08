@@ -3360,6 +3360,11 @@ picture > img {
     text-align: left;
   }
 
+  .cart-page .quantity-select {
+    height: 30px;
+    width: 90px;
+  }
+
   .cart-page .td-delete-cart-item {
     position: absolute;
     top: 0;

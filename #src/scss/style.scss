@@ -2098,6 +2098,10 @@ main{
     height: 20px;
     display: flex;
     justify-content: center;
+    @media (max-width: 754px){
+      height: 30px;
+      width: 90px;
+    }
     &>span{
       text-align: center;
       width: 20px;
