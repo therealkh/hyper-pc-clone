@@ -2050,10 +2050,10 @@ main.on-burger-open {
 }
 
 .cart-page .cart-item-big-info .options > a {
-  font-size: 0;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  font-size: 0;
+  min-width: 15px;
+  min-height: 15px;
   margin: 0 10px;
   background-image: url("../img/pen.svg");
   background-size: contain;
@@ -2135,7 +2135,7 @@ main.on-burger-open {
 
 .cart-page .quantity-select > span {
   text-align: center;
-  width: 60px;
+  width: 20px;
   border-left: 1px solid #969696;
   border-right: 1px solid #969696;
   font-size: 13px;
@@ -2152,12 +2152,11 @@ main.on-burger-open {
 
 .cart-page .quantity-select > button {
   border-radius: 3px;
-  width: 60px;
+  width: 20px;
   padding: 0;
   background-color: #161616;
   border: none;
   color: #969696;
-  font-size: 25px;
 }
 
 .cart-page .price {
@@ -2179,12 +2178,13 @@ main.on-burger-open {
 }
 
 .cart-page .delete-cart-item {
+  padding: 0;
   width: 20px;
   height: 20px;
   border: none;
   background-color: transparent;
   background-image: url("../img/delete.svg");
-  background-size: 20px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   outline: none;
@@ -3357,6 +3357,20 @@ picture > img {
     position: relative;
   }
 
+  .cart-page .cart-item-big {
+    padding-right: 30px;
+  }
+
+  .cart-page .cart-item-big-info .options > a {
+    min-height: 18px;
+    min-width: 18px;
+    margin: 0 5px;
+  }
+
+  .cart-page .cart-item-small {
+    padding-right: 30px;
+  }
+
   .cart-page .under-order {
     text-align: left;
   }
@@ -3366,10 +3380,24 @@ picture > img {
     width: 120px;
   }
 
+  .cart-page .quantity-select > span {
+    width: 60px;
+  }
+
+  .cart-page .quantity-select > button {
+    font-size: 15px;
+    width: 60px;
+  }
+
   .cart-page .td-delete-cart-item {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .cart-page .delete-cart-item {
+    width: 30px;
+    height: 30px;
   }
 
   .cart-page .avaible {

@@ -1978,6 +1978,9 @@ main{
     font-family: 'Play';
     //border: 1px solid #fff;
     max-width: 400px;
+    @media (max-width: 754px) {
+      padding-right: 30px;
+    }
     &-img{
       height: 60px;
       width: 60px;
@@ -2030,16 +2033,21 @@ main{
           }
         }
         &>a{
-          font-size: 0;
           display: inline-block;
-          width: 15px;
-          height: 15px;
+          font-size: 0;
+          min-width: 15px;
+          min-height: 15px;
           margin: 0 10px;
           background-image: url('../img/pen.svg');
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
           opacity: 0.7;
+          @media(max-width: 754px){
+            min-height: 18px;
+            min-width: 18px;
+            margin: 0 5px;
+          }
           &:hover{
             opacity: 1;
           }
@@ -2055,6 +2063,9 @@ main{
     font-family: 'Play';
     //border: 1px solid #fff;
     max-width: 400px;
+    @media (max-width: 754px) {
+      padding-right: 30px;
+    }
     &-img{
       height: 60px;
       width: 60px;
@@ -2104,22 +2115,29 @@ main{
     }
     &>span{
       text-align: center;
-      width: 60px;
+      width: 20px;
       border-left: 1px solid $menu_item_gray;
       border-right: 1px solid $menu_item_gray;
       font-size: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: 754px){
+        width: 60px;
+      }
     }
     &>button{
       border-radius: 3px;
-      width: 60px;
+      width: 20px;
       padding: 0;
       background-color: $footer_gray_bg;
       border: none;
       color: $menu_item_gray;
-      font-size: 25px;
+      
+      @media (max-width: 754px){
+        font-size: 15px;
+        width: 60px;
+      }
     }
   }
   .price{
@@ -2145,12 +2163,17 @@ main{
     }
   }
   .delete-cart-item{
+    padding: 0;
     width: 20px;
     height: 20px;
+    @media (max-width: 754px) {
+      width: 30px;
+      height: 30px;
+    }
     border: none;
     background-color: transparent;
     background-image: url('../img/delete.svg');
-    background-size: 20px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     outline: none;
