@@ -50,6 +50,7 @@ $menu_bor_bot: #d60000;
 
 * {
   //box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -1927,6 +1928,7 @@ main{
     &>table{
       color: $menu_item_light;
       font-family: 'Montserrat';
+      max-width: 1000px;
       @media (min-width: 755px) {
         border-collapse: collapse;
         border-top: 4px solid transparent;
@@ -1946,6 +1948,9 @@ main{
       }
       tr{
         border-bottom: 1px solid $menu_bor_bot;
+        &:hover{
+          background-color: $footer_gray_bg;
+        }
       }
       thead{
         background-color: $footer_gray_bg;
@@ -1977,7 +1982,7 @@ main{
     color: $menu_item_light;
     font-family: 'Play';
     //border: 1px solid #fff;
-    max-width: 400px;
+    //max-width: 400px;
     @media (max-width: 754px) {
       padding-right: 30px;
     }
@@ -2113,9 +2118,14 @@ main{
       height: 30px;
       width: 120px;
     }
-    &>span{
+    &>input{
       text-align: center;
+      padding: 0;
+      background-color: transparent;
       width: 20px;
+      border: none;
+      outline: none;
+      color: $menu_item_light;
       border-left: 1px solid $menu_item_gray;
       border-right: 1px solid $menu_item_gray;
       font-size: 13px;
@@ -2123,10 +2133,11 @@ main{
       align-items: center;
       justify-content: center;
       @media (max-width: 754px){
-        width: 60px;
+        width: 40px;
       }
     }
     &>button{
+      cursor: pointer;
       border-radius: 3px;
       width: 20px;
       padding: 0;
@@ -2136,7 +2147,7 @@ main{
       
       @media (max-width: 754px){
         font-size: 25px;
-        width: 60px;
+        width: 40px;
       }
     }
   }
@@ -2200,6 +2211,9 @@ main{
         font-size: 15px;
       }
     }
+    &:hover{
+      background-color: unset!important;
+    }
   }
   tr.order{
     color: $menu_item_light;
@@ -2216,6 +2230,9 @@ main{
         background: $gradient_red;
         font-size: 15px;
       }
+    }
+    &:hover{
+      background-color: unset!important;
     }
   }
 }

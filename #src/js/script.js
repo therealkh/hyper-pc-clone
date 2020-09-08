@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // **********[ANY CLICK ON PAGE]*************
   document.addEventListener('click', (event) => {
     //console.log(event.target);
-    //! ***********[BURGER]*********** 
+    //! ***********[BURGER]***********
     if (event.target.closest('.burger')) {
       burger.classList.toggle('active');
       if (burger.classList.contains('active')) {
@@ -44,6 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.body-wrapper').classList.remove('on-menu-open');
       document.querySelector('.header-wrapper').style.overflowX = 'hidden';
       burger.classList.remove('active');
+    }
+    //! **************[Quantity select in cart]***********
+    if (event.target.closest('.quantity-select')) {
+      const wrapper = event.target.closest('.quantity-select');
+      const input = wrapper.querySelector('.quantity');
+      if (event.target.classList.contains('q-more')) {
+        input.value++;
+      }
+      if (event.target.classList.contains('q-less') && input.value > 1) {
+        input.value--;
+      }
     }
     //! ***********[MENU SIDEBAR]***********
     if (document.documentElement.offsetWidth <= 1080) {

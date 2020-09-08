@@ -1,3 +1,7 @@
+* {
+  outline: none;
+}
+
 body {
   background-color: #111111;
 }
@@ -1928,6 +1932,7 @@ main.on-burger-open {
 .cart-page > .table-wrapper > table {
   color: #fff;
   font-family: 'Montserrat';
+  max-width: 1000px;
 }
 
 .cart-page > .table-wrapper > table td {
@@ -1936,6 +1941,10 @@ main.on-burger-open {
 
 .cart-page > .table-wrapper > table tr {
   border-bottom: 1px solid #d60000;
+}
+
+.cart-page > .table-wrapper > table tr:hover {
+  background-color: #161616;
 }
 
 .cart-page > .table-wrapper > table thead {
@@ -1963,7 +1972,6 @@ main.on-burger-open {
           align-items: center;
   color: #fff;
   font-family: 'Play';
-  max-width: 400px;
 }
 
 .cart-page .cart-item-big-img {
@@ -2133,9 +2141,14 @@ main.on-burger-open {
           justify-content: center;
 }
 
-.cart-page .quantity-select > span {
+.cart-page .quantity-select > input {
   text-align: center;
+  padding: 0;
+  background-color: transparent;
   width: 20px;
+  border: none;
+  outline: none;
+  color: #fff;
   border-left: 1px solid #969696;
   border-right: 1px solid #969696;
   font-size: 13px;
@@ -2151,6 +2164,7 @@ main.on-burger-open {
 }
 
 .cart-page .quantity-select > button {
+  cursor: pointer;
   border-radius: 3px;
   width: 20px;
   padding: 0;
@@ -2211,6 +2225,10 @@ main.on-burger-open {
   font-size: 15px;
 }
 
+.cart-page tr.summ-price:hover {
+  background-color: unset !important;
+}
+
 .cart-page tr.order {
   color: #fff;
   font-family: 'Play';
@@ -2227,6 +2245,10 @@ main.on-burger-open {
   background: -o-linear-gradient(135deg, #fa0105 0%, #a00000 100%);
   background: linear-gradient(-45deg, #fa0105 0%, #a00000 100%);
   font-size: 15px;
+}
+
+.cart-page tr.order:hover {
+  background-color: unset !important;
 }
 
 picture > img {
@@ -3380,13 +3402,13 @@ picture > img {
     width: 120px;
   }
 
-  .cart-page .quantity-select > span {
-    width: 60px;
+  .cart-page .quantity-select > input {
+    width: 40px;
   }
 
   .cart-page .quantity-select > button {
     font-size: 25px;
-    width: 60px;
+    width: 40px;
   }
 
   .cart-page .td-delete-cart-item {
