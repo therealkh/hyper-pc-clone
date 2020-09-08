@@ -3368,6 +3368,7 @@ picture > img {
 
   .cart-page .avaible {
     text-align: left;
+    border: 1px solid #fff;
   }
 }
 
