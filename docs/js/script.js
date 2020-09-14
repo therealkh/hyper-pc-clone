@@ -27,22 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.style.right = `-${menuWidth - 20}px`;
         bodyWrapper.style.left = `-${menuWidth}px`;
         document.querySelector('body').style.overflow = 'hidden';
-        document.querySelector('.header-wrapper').style.overflowX = 'unset';
+        document.querySelector('.header-wrapper').style.overflow = 'visible';
         document.querySelector('.body-wrapper').classList.add('on-menu-open');
 
       } else {
         bodyWrapper.style.left = 0;
         burger.style.right = `65px`;
-        document.querySelector('body').style.overflow = 'unset';
+        document.querySelector('body').style.overflow = 'visible';
         document.querySelector('.body-wrapper').classList.remove('on-menu-open');
-        document.querySelector('.header-wrapper').style.overflowX = 'hidden';
+        document.querySelector('.header-wrapper').style.overflow = 'hidden';
       }
     } else if (burger.classList.contains('active') && !event.target.closest('.menu-block')) {
       bodyWrapper.style.left = 0;
       burger.style.right = `65px`;
-      document.querySelector('body').style.overflow = 'unset';
+      document.querySelector('body').style.overflow = 'visible';
       document.querySelector('.body-wrapper').classList.remove('on-menu-open');
-      document.querySelector('.header-wrapper').style.overflowX = 'hidden';
+      document.querySelector('.header-wrapper').style.overflow = 'hidden';
       burger.classList.remove('active');
     }
     //! **************[Quantity select in cart]***********
@@ -114,9 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }//--
     }
     //! **************[TABS]**************
-    if (event.target.classList.contains('tab-nav')) {
-      const currentTabNav = event.target;
-      const parent = event.target.parentElement;
+    if (event.target.closest('.tab-nav')) {
+      const currentTabNav = event.target.closest('.tab-nav');
+      const parent = event.target.closest('.tab-nav').parentElement;
       const tabNav = parent.querySelectorAll('.tab-nav');
       const tabNavID = currentTabNav.getAttribute('data-tab-nav-id');
       const tabContent = parent.parentElement.querySelector('.tab-content-wrapper').querySelectorAll('.tab-content');
@@ -146,11 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.height = 'unset';
       });
       if (lastDocWidth < width) {
-        document.querySelector('.header-wrapper').style.overflowX = 'unset';
+        document.querySelector('.header-wrapper').style.overflow = 'visible';
       }
     }
     else if (lastDocWidth > width && lastDocWidth >= 1080) {
-      document.querySelector('.header-wrapper').style.overflowX = 'hidden';
+      document.querySelector('.header-wrapper').style.overflow = 'hidden';
       let menuItems = document.querySelectorAll('.menu-block>ul>li');
       menuItems.forEach((item) => {
         if (item.querySelector('.drop-down')) {
@@ -182,9 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
       bodyWrapper.style.left = 0;
       burger.classList.remove('active');
       burger.style.right = `65px`;
-      document.querySelector('body').style.overflow = 'unset';
+      document.querySelector('body').style.overflow = 'visible';
       document.querySelector('.body-wrapper').classList.remove('on-menu-open');
-      document.querySelector('.header-wrapper').style.overflowX = 'hidden';
+      document.querySelector('.header-wrapper').style.overflow = 'hidden';
     }
     lastDocWidth = width;
   });
