@@ -2746,6 +2746,7 @@ main{
           margin: 10px 0 10px 0;
           select {
             border-radius: 0;
+            -webkit-appearance: none;
             border: none;
             background-color: $menu_item_dark;
             color: $fast_link_item_gray;
