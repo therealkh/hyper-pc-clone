@@ -2683,7 +2683,7 @@ main.on-burger-open {
   background-image: linear-gradient(270deg, #fa0105 0%, #640000 100%);
 }
 
-input[type='radio'] {
+.order-page input[type='radio'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2709,7 +2709,7 @@ input[type='radio'] {
   position: relative;
 }
 
-input[type='radio']:after {
+.order-page input[type='radio']:after {
   content: '';
   position: absolute;
   top: 0;
@@ -2725,18 +2725,18 @@ input[type='radio']:after {
   transition: background-color 0.3s;
 }
 
-input[type='radio']:checked {
+.order-page input[type='radio']:checked {
   background-image: none;
   background-color: #d60000;
 }
 
-input[type='radio']:checked:after {
+.order-page input[type='radio']:checked:after {
   background-color: #fff;
 }
 
-input[type='text'],
-input[type='tel'],
-input[type='mail'] {
+.order-page input[type='text'],
+.order-page input[type='tel'],
+.order-page input[type='mail'] {
   width: 100%;
   font-size: 20px;
   padding: 10px;
@@ -2752,25 +2752,25 @@ input[type='mail'] {
           box-sizing: border-box;
 }
 
-input[type='text']::-webkit-input-placeholder, input[type='tel']::-webkit-input-placeholder, input[type='mail']::-webkit-input-placeholder {
+.order-page input[type='text']::-webkit-input-placeholder, .order-page input[type='tel']::-webkit-input-placeholder, .order-page input[type='mail']::-webkit-input-placeholder {
   color: #7A7B72;
 }
 
-input[type='text']::-moz-placeholder, input[type='tel']::-moz-placeholder, input[type='mail']::-moz-placeholder {
+.order-page input[type='text']::-moz-placeholder, .order-page input[type='tel']::-moz-placeholder, .order-page input[type='mail']::-moz-placeholder {
   color: #7A7B72;
 }
 
-input[type='text']:-ms-input-placeholder, input[type='tel']:-ms-input-placeholder, input[type='mail']:-ms-input-placeholder {
+.order-page input[type='text']:-ms-input-placeholder, .order-page input[type='tel']:-ms-input-placeholder, .order-page input[type='mail']:-ms-input-placeholder {
   color: #7A7B72;
 }
 
-input[type='text']::-ms-input-placeholder, input[type='tel']::-ms-input-placeholder, input[type='mail']::-ms-input-placeholder {
+.order-page input[type='text']::-ms-input-placeholder, .order-page input[type='tel']::-ms-input-placeholder, .order-page input[type='mail']::-ms-input-placeholder {
   color: #7A7B72;
 }
 
-input[type='text']::placeholder,
-input[type='tel']::placeholder,
-input[type='mail']::placeholder {
+.order-page input[type='text']::placeholder,
+.order-page input[type='tel']::placeholder,
+.order-page input[type='mail']::placeholder {
   color: #7A7B72;
 }
 
@@ -4098,9 +4098,9 @@ picture > img {
     font-size: 13px;
   }
 
-  input[type='text'],
-  input[type='tel'],
-  input[type='mail'] {
+  .order-page input[type='text'],
+  .order-page input[type='tel'],
+  .order-page input[type='mail'] {
     font-size: 15px;
   }
 }

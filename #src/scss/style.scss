@@ -2588,63 +2588,64 @@ main{
       }
     }
   }
-}
-
-input[type='radio'] {
-  appearance: none;
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  overflow: hidden;
-  margin-top: -4px;
-  vertical-align: middle;
-  background-image: $gradient_red_horizontal;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transition: all .2s ease-in-out;
-  transition: background-color 0s;
-  border-radius: 0;
-  position: relative;
-  &:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(50%) translateX(50%);
-    width: 50%;
-    height: 50%;
+  input[type='radio'] {
+    appearance: none;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    margin-top: -4px;
+    vertical-align: middle;
+    background-image: $gradient_red_horizontal;
     background-color: transparent;
-    transition: background-color 0.3s;
-  }
-  &:checked{
-    background-image: none;
-    background-color: $menu_bor_bot;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: all .2s ease-in-out;
+    transition: background-color 0s;
+    border-radius: 0;
+    position: relative;
     &:after{
-      background-color: $menu_item_light;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(50%) translateX(50%);
+      width: 50%;
+      height: 50%;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+    &:checked{
+      background-image: none;
+      background-color: $menu_bor_bot;
+      &:after{
+        background-color: $menu_item_light;
+      }
+    }
+  }
+  input[type = 'text'],
+  input[type = 'tel'],
+  input[type = 'mail'] {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    background-color: $footer_gray_bg;
+    border: 2px solid red;
+    border-image: $gradient_red_horizontal;
+    border-image-slice: 1;
+    color: $fast_link_item_gray;
+    box-sizing: border-box;
+    @media(max-width: 500px){
+      font-size: 15px;
+    }
+    &::placeholder{
+      color: $darker_gray;
     }
   }
 }
-input[type = 'text'],
-input[type = 'tel'],
-input[type = 'mail'] {
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  margin: 5px;
-  background-color: $footer_gray_bg;
-  border: 2px solid red;
-  border-image: $gradient_red_horizontal;
-  border-image-slice: 1;
-  color: $fast_link_item_gray;
-  box-sizing: border-box;
-  @media(max-width: 500px){
-    font-size: 15px;
-  }
-  &::placeholder{
-    color: $darker_gray;
-  }
-}
+
+
 picture{
   &>img{
     width: 100%;
