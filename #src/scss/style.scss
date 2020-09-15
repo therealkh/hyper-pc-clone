@@ -2252,18 +2252,28 @@ main{
     max-width: 600px;
     box-sizing: content-box;
     margin: 0 auto;
-    //border: 1px solid #0f0;
+    padding: 10px;
+    @media(max-width: 1270px){
+      margin-left: 150px;
+    }
+    @media(max-width: 1100px){
+      margin-left: 50px;
+    }
+    @media(max-width: 1000px){
+      margin: 0 auto;
+    }
     .order-page__wrapper {
       position: relative;
       .order-cart {
-        //position: absolute;
-        //right: 0;
-        //transform: translateX(100%);
         margin: 0 auto;
-        max-width: 300px;
-        //border: 1px solid #F00;
+        max-width: 98%;
         color: $menu_item_light;
         font-family: 'Play';
+        @media (min-width: 1001px) {
+          position: absolute;
+          right: 0;
+          transform: translateX(100%);
+        }
         &__header {
           font-size: 20px;
           margin: 0 10px;
@@ -2459,6 +2469,7 @@ main{
           flex-direction: column;
           margin-bottom: 10px;
           margin-top: 20px;
+          position: relative;
           &__header {
             font-size: 15px;
             font-weight: 600;
@@ -2508,6 +2519,70 @@ main{
                 padding: 10px 20px;
               }
             }
+          }
+        }
+        .payments {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          @media(max-width: 500px){
+            flex-direction: column;
+          }
+          &__payme, &__clickevo {
+            width: 100px;
+            @media(max-width: 500px){
+              width: 80px;
+            }
+          }
+          &__payme{
+            margin-right: 30px;
+          }
+        }
+        .order-leave-com {
+          margin-bottom: 50px;
+          a {
+            font-size: 13px;
+            font-style: italic;
+            color: $darker_gray;
+            transition: all 0.2s;
+            &:hover {
+              color: $fast_link_item_gray;
+            }
+            &:active {}
+            &:focus {}
+          }
+        }
+        .order-btns {
+          display: flex;
+          justify-content: center;
+          a{
+            padding: 10px 20px;
+            font-size: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Montserrat';
+            @media (max-width: 500px) {
+              font-size: 13px;
+            }
+          }
+          &__back {
+            margin-right: 10px;
+            border: 2px solid red;
+            border-image: $gradient_red_horizontal;
+            border-image-slice: 1;
+            transition: all 0.2s;
+            color: $menu_item_light;
+            &:active {}
+            &:focus {}
+          }
+          &__order {
+            color: $menu_item_light;
+            background-image: $gradient_red_horizontal;
+            &:hover {}
+            &:active {}
+            &:focus {}
           }
         }
       }
@@ -2561,6 +2636,10 @@ input[type = 'mail'] {
   border-image: $gradient_red_horizontal;
   border-image-slice: 1;
   color: $fast_link_item_gray;
+  box-sizing: border-box;
+  @media(max-width: 500px){
+    font-size: 15px;
+  }
   &::placeholder{
     color: $darker_gray;
   }
