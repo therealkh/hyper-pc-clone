@@ -2604,6 +2604,7 @@ input[type='radio'] {
   background-position: 50% 50%;
   transition: all .2s ease-in-out;
   transition: background-color 0s;
+  border-radius: 0;
   position: relative;
   &:after{
     content: '';
